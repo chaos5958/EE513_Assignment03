@@ -1,0 +1,2710 @@
+alert tcp 192.168.1.0/24 any -> 192.168.1.0/24 22 (content:"/bin/sh"; msg:"Remote shell execution message! ")
+alert tcp any any -> 143.248.5.153 80 (msg:"A packet destined to www.kaist.ac.kr")
+alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+Finding available devices ... Done
+Available Devices are :
+1. eth0 - (null)
+2. any - Pseudo-device that captures on all interfaces
+3. lo - (null)
+iter :alert tcp 192.168.1.0/24 any -> 192.168.1.0/24 22 (content:"/bin/sh"; msg:"Remote shell execution message! ")
+snort rule size: 4
+filter rule: 
+iter :alert tcp any any -> 143.248.5.153 80 (msg:"A packet destined to www.kaist.ac.kr")
+snort rule size: 4
+iter :alert tcp any any -> 143.248.5.153 80 (msg:"A packet destined to www.kaist.ac.kr")
+snort rule size: 4
+filter rule: 
+iter :alert tcp any any -> 143.248.5.153 80 (msg:"A packet destined to www.kaist.ac.kr")
+snort rule size: 4
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+filter rule: 
+filter rule: 
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+iter :alert tcp any any -> 143.248.5.153 80 (msg:"A packet destined to www.kaist.ac.kr")
+snort rule size: 4
+filter rule: 
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+filter rule: 
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+filter rule: 
+filter rule: 
+iter :alert tcp any any -> 143.248.5.153 80 (msg:"A packet destined to www.kaist.ac.kr")
+snort rule size: 4
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert tcp any any -> 143.248.5.153 80 (msg:"A packet destined to www.kaist.ac.kr")
+snort rule size: 4
+iter :alert tcp any any -> 143.248.5.153 80 (msg:"A packet destined to www.kaist.ac.kr")
+snort rule size: 4
+filter rule: 
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+filter rule: 
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+filter rule: 
+filter rule: 
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+filter rule: 
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+filter rule: 
+filter rule: 
+filter rule: 
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+snort rule size: 4
+main end
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+filter rule: 
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+filter rule: 
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+filter rule: 
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+main end
+main end
+filter rule: 
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+main end
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert tcp any any -> 143.248.5.153 80 (msg:"A packet destined to www.kaist.ac.kr")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+filter rule: 
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+filter rule: 
+filter rule: 
+main end
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+main end
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+filter rule: 
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+main end
+filter rule: 
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+main end
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+main end
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+main end
+main end
+filter rule: 
+main end
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+main end
+filter rule: 
+filter rule: 
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+1
+Opening device any for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+Opening device any for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+Opening device lo for sniffing ... 1
+1
+filter rule: 
+Opening device any for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device any for sniffing ... 1
+1
+filter rule: 
+Opening device any for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+filter rule: 
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+main end
+filter rule: 
+filter rule: 
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+filter rule: 
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+filter rule: 
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+main end
+Opening device any for sniffing ... 1
+Opening device any for sniffing ... 1
+1
+1
+Opening device any for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+filter rule: 
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+Opening device eth0 for sniffing ... 1
+filter rule: 
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+Opening device any for sniffing ... 1
+1
+1
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+Opening device lo for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device any for sniffing ... 1
+1
+filter rule: 
+filter rule: 
+Opening device any for sniffing ... 1
+1
+main end
+main end
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+filter rule: 
+filter rule: 
+main end
+Opening device eth0 for sniffing ... 1
+Opening device any for sniffing ... 1
+1
+1
+main end
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device lo for sniffing ... 1
+1
+filter rule: 
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device eth0 for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+filter rule: 
+Opening device eth0 for sniffing ... 1
+1
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+snort rule size: 4
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+filter rule: 
+Opening device any for sniffing ... 1
+1
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device any for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+filter rule: 
+1
+Opening device eth0 for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+filter rule: 
+snort rule size: 4
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+main end
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+filter rule: 
+filter rule: 
+filter rule: 
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+filter rule: 
+filter rule: 
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+filter rule: 
+filter rule: 
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+filter rule: 
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+filter rule: 
+Opening device eth0 for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+Opening device lo for sniffing ... 1
+Opening device lo for sniffing ... 1
+1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+filter rule: 
+Opening device eth0 for sniffing ... 1
+1
+filter rule: 
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+Opening device lo for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+1
+Opening device lo for sniffing ... 1
+Opening device eth0 for sniffing ... 1
+1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+filter rule: 
+Opening device eth0 for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+main end
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+main end
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+main end
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+main end
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+main end
+filter rule: 
+filter rule: 
+Opening device eth0 for sniffing ... 1
+1
+main end
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+main end
+filter rule: 
+filter rule: 
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+1
+Opening device any for sniffing ... 1
+1
+filter rule: 
+Opening device lo for sniffing ... 1
+1
+filter rule: 
+Opening device any for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+Opening device any for sniffing ... 1
+1
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+filter rule: 
+Opening device lo for sniffing ... 1
+Opening device eth0 for sniffing ... 1
+1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+main end
+main end
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+main end
+main end
+main end
+filter rule: 
+main end
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device any for sniffing ... 1
+1
+filter rule: 
+main end
+filter rule: 
+main end
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+filter rule: 
+filter rule: 
+1
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+Opening device lo for sniffing ... 1
+Opening device any for sniffing ... 1
+1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+Opening device eth0 for sniffing ... 1
+1
+1
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+filter rule: 
+1
+Opening device eth0 for sniffing ... 1
+1
+filter rule: 
+Opening device any for sniffing ... 1
+Opening device eth0 for sniffing ... 1
+1
+1
+filter rule: 
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+main end
+main end
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+main end
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+filter rule: 
+main end
+main end
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device eth0 for sniffing ... 1
+1
+filter rule: 
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+Opening device eth0 for sniffing ... 1
+1
+filter rule: 
+Opening device eth0 for sniffing ... 1
+1
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+filter rule: 
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device any for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+Opening device any for sniffing ... 1
+1
+main end
+main end
+main end
+Opening device any for sniffing ... 1
+1
+main end
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+main end
+main end
+main end
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device lo for sniffing ... 1
+Opening device lo for sniffing ... 1
+1
+main end
+Opening device eth0 for sniffing ... 1
+1
+1
+main end
+Opening device eth0 for sniffing ... 1
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+1
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+filter rule: 
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+Opening device any for sniffing ... 1
+1
+1
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+main end
+main end
+filter rule: 
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+main end
+main end
+Opening device any for sniffing ... 1
+filter rule: 
+1
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device eth0 for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+main end
+filter rule: 
+main end
+main end
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+Opening device lo for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+main end
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device any for sniffing ... 1
+1
+main end
+main end
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device eth0 for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+main end
+Opening device any for sniffing ... 1
+1
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device eth0 for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+filter rule: 
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+filter rule: 
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+main end
+Opening device any for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+filter rule: 
+Opening device eth0 for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device lo for sniffing ... 1
+1
+snort rule size: 4
+main end
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+main end
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+Opening device any for sniffing ... 1
+1
+main end
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+main end
+main end
+main end
+main end
+filter rule: 
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device lo for sniffing ... 1
+filter rule: 
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+main end
+filter rule: 
+Opening device lo for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+main end
+main end
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device any for sniffing ... 1
+1
+filter rule: 
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device any for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+filter rule: 
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+Opening device lo for sniffing ... 1
+1
+1
+filter rule: 
+Opening device lo for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+filter rule: 
+main end
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+Opening device any for sniffing ... 1
+1
+1
+main end
+Opening device any for sniffing ... 1
+1
+main end
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+Opening device lo for sniffing ... 1
+1
+filter rule: 
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+Opening device lo for sniffing ... 1
+1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+Opening device lo for sniffing ... 1
+1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+main end
+filter rule: 
+Opening device eth0 for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+filter rule: 
+Opening device eth0 for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+filter rule: 
+1
+Opening device any for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+Opening device eth0 for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+Opening device lo for sniffing ... 1
+1
+1
+Opening device lo for sniffing ... 1
+Opening device any for sniffing ... 1
+1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+Opening device lo for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+filter rule: 
+Opening device any for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+Opening device any for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+1
+filter rule: 
+main end
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+main end
+Opening device any for sniffing ... 1
+1
+filter rule: 
+Opening device lo for sniffing ... 1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+snort rule size: 4
+filter rule: 
+filter rule: 
+main end
+main end
+filter rule: 
+Opening device lo for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device lo for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+filter rule: 
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+main end
+main end
+Opening device any for sniffing ... 1
+1
+main end
+filter rule: 
+main end
+Opening device lo for sniffing ... 1
+main end
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device eth0 for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+filter rule: 
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+main end
+filter rule: 
+Opening device lo for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+filter rule: 
+main end
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device lo for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+Opening device any for sniffing ... 1
+snort rule size: 4
+1
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+filter rule: 
+1
+filter rule: 
+Opening device lo for sniffing ... 1
+1
+main end
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device any for sniffing ... 1
+filter rule: 
+Opening device any for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+filter rule: 
+filter rule: 
+Opening device lo for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+Opening device any for sniffing ... 1
+Opening device any for sniffing ... 1
+1
+1
+Opening device any for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+1
+filter rule: 
+main end
+main end
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device eth0 for sniffing ... 1
+1
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device any for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+Opening device eth0 for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device any for sniffing ... 1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+Opening device eth0 for sniffing ... 1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+1
+snort rule size: 4
+Opening device eth0 for sniffing ... 1
+1
+filter rule: 
+Opening device any for sniffing ... 1
+1
+main end
+Opening device any for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device lo for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+filter rule: 
+main end
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device lo for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+filter rule: 
+Opening device eth0 for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+filter rule: 
+Opening device any for sniffing ... 1
+Opening device lo for sniffing ... 1
+1
+1
+Opening device any for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+Opening device lo for sniffing ... 1
+1
+1
+Opening device eth0 for sniffing ... 1
+Opening device any for sniffing ... 1
+1
+1
+Opening device any for sniffing ... 1
+1
+1
+main end
+Opening device lo for sniffing ... 1
+Opening device eth0 for sniffing ... 1
+1
+1
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device lo for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+filter rule: 
+Opening device eth0 for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device any for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+filter rule: 
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+filter rule: 
+main end
+main end
+main end
+main end
+main end
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+main end
+Opening device lo for sniffing ... 1
+Opening device any for sniffing ... 1
+1
+filter rule: 
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+main end
+Opening device lo for sniffing ... 1
+1
+main end
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+Opening device lo for sniffing ... 1
+1
+1
+main end
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+main end
+Opening device lo for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device any for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+Opening device any for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+Opening device lo for sniffing ... 1
+1
+1
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+Opening device any for sniffing ... 1
+1
+filter rule: 
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+Opening device lo for sniffing ... 1
+1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+main end
+Opening device eth0 for sniffing ... 1
+1
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+main end
+main end
+main end
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+Opening device eth0 for sniffing ... 1
+snort rule size: 4
+1
+Opening device lo for sniffing ... 1
+main end
+1
+Opening device lo for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+main end
+filter rule: 
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+main end
+main end
+Opening device any for sniffing ... 1
+1
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+main end
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+main end
+filter rule: 
+filter rule: 
+main end
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+main end
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+main end
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+main end
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+main end
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device eth0 for sniffing ... 1
+1
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device eth0 for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device eth0 for sniffing ... 1
+main end
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device eth0 for sniffing ... 1
+1
+filter rule: 
+Opening device any for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+main end
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+main end
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device lo for sniffing ... 1
+1
+filter rule: 
+Opening device eth0 for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+main end
+1
+snort rule size: 4
+Opening device lo for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device eth0 for sniffing ... 1
+Opening device any for sniffing ... 1
+1
+1
+main end
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+main end
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+filter rule: 
+main end
+main end
+1
+Opening device any for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+main end
+Opening device any for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+filter rule: 
+Opening device lo for sniffing ... 1
+main end
+1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+Opening device lo for sniffing ... 1
+1
+1
+filter rule: 
+Opening device any for sniffing ... 1
+1
+filter rule: 
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+main end
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+main end
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+Opening device eth0 for sniffing ... 1
+1
+main end
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+main end
+main end
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+main end
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+filter rule: 
+filter rule: 
+main end
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+main end
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+filter rule: 
+Opening device eth0 for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+Opening device eth0 for sniffing ... 1
+filter rule: 
+Opening device eth0 for sniffing ... 1
+1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+Opening device lo for sniffing ... 1
+1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device lo for sniffing ... 1
+main end
+1
+Opening device any for sniffing ... 1
+1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+main end
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+filter rule: 
+Opening device any for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+main end
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+main end
+Opening device eth0 for sniffing ... 1
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device eth0 for sniffing ... 1
+1
+filter rule: 
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device any for sniffing ... 1
+Opening device lo for sniffing ... 1
+1
+1
+main end
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device eth0 for sniffing ... 1
+1
+filter rule: 
+main end
+main end
+main end
+Opening device eth0 for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device any for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+Opening device any for sniffing ... 1
+1
+1
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+main end
+Opening device lo for sniffing ... 1
+1
+main end
+filter rule: 
+Opening device any for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device any for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+filter rule: 
+filter rule: 
+Opening device any for sniffing ... 1
+Opening device any for sniffing ... 1
+1
+1
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+1
+main end
+Opening device eth0 for sniffing ... 1
+Opening device lo for sniffing ... 1
+1
+filter rule: 
+filter rule: 
+Opening device any for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device eth0 for sniffing ... 1
+1
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device any for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device eth0 for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+filter rule: 
+filter rule: 
+Opening device any for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+1
+filter rule: 
+main end
+filter rule: 
+filter rule: 
+filter rule: 
+main end
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device lo for sniffing ... 1
+1
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device any for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+filter rule: 
+Opening device eth0 for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device lo for sniffing ... 1
+1
+filter rule: 
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+main end
+main end
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+main end
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+Opening device any for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+main end
+filter rule: 
+Opening device any for sniffing ... 1
+1
+main end
+Opening device eth0 for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device any for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+main end
+Opening device lo for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+main end
+main end
+filter rule: 
+Opening device eth0 for sniffing ... 1
+main end
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device eth0 for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+Opening device any for sniffing ... 1
+1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+filter rule: 
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+filter rule: 
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+main end
+main end
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+main end
+Opening device eth0 for sniffing ... 1
+1
+filter rule: 
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+main end
+main end
+filter rule: 
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+1
+main end
+Opening device lo for sniffing ... 1
+Opening device lo for sniffing ... 1
+1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+main end
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device lo for sniffing ... 1
+1
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+Opening device any for sniffing ... 1
+1
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device eth0 for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+main end
+Opening device lo for sniffing ... 1
+1
+main end
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+main end
+Opening device lo for sniffing ... 1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+1
+snort rule size: 4
+Opening device lo for sniffing ... 1
+1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+main end
+Opening device lo for sniffing ... 1
+1
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+Opening device eth0 for sniffing ... 1
+1
+main end
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device lo for sniffing ... 1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+1
+main end
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device any for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+iter :alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging   from  1 to 1024")
+snort rule size: 4
+Opening device lo for sniffing ... 1
+1
+filter rule: 
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+Opening device eth0 for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+main end
+Opening device lo for sniffing ... 1
+1
+main end
+Opening device lo for sniffing ... 1
+1
+main end
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+main end
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+main end
+Opening device eth0 for sniffing ... 1
+1
+main end
+main end
+main end
+Opening device lo for sniffing ... 1
+1
+main end
+main end
+main end
+main end
+main end
+Opening device lo for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+filter rule: 
+filter rule: 
+main end
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+main end
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+filter rule: 
+filter rule: 
+Opening device any for sniffing ... 1
+1
+main end
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+main end
+filter rule: 
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+main end
+main end
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+main end
+filter rule: 
+filter rule: 
+main end
+main end
+main end
+main end
+main end
+Opening device any for sniffing ... 1
+1
+main end
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device lo for sniffing ... 1
+1
+filter rule: 
+Opening device any for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+filter rule: 
+Opening device eth0 for sniffing ... 1
+1
+filter rule: 
+Opening device lo for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+filter rule: 
+Opening device eth0 for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+main end
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+Opening device lo for sniffing ... 1
+Opening device eth0 for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+main end
+filter rule: 
+Opening device any for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+main end
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device any for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+Opening device eth0 for sniffing ... 1
+1
+Opening device eth0 for sniffing ... 1
+1
+filter rule: 
+main end
+main end
+Opening device lo for sniffing ... 1
+1
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+main end
+Opening device eth0 for sniffing ... 1
+main end
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device lo for sniffing ... 1
+1
+main end
+main end
+Opening device eth0 for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+main end
+1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+main end
+main end
+main end
+filter rule: 
+main end
+main end
+main end
+main end
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+snort rule size: 4
+Opening device eth0 for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device any for sniffing ... 1
+filter rule: 
+filter rule: 
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+filter rule: 
+filter rule: 
+filter rule: 
+filter rule: 
+Opening device lo for sniffing ... 1
+Opening device lo for sniffing ... 1
+filter rule: 
+filter rule: 
+Opening device eth0 for sniffing ... 1
+Opening device eth0 for sniffing ... 1
+filter rule: 
+filter rule: 
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+Opening device eth0 for sniffing ... 1
+Opening device eth0 for sniffing ... 1
+Opening device any for sniffing ... 1
+Opening device any for sniffing ... 1
+main end
+main end
+1
+1
+1
+1
+Opening device lo for sniffing ... 1
+Opening device lo for sniffing ... 1
+filter rule: 
+main end
+Opening device lo for sniffing ... 1
+Opening device lo for sniffing ... 1
+Opening device lo for sniffing ... main end
+filter rule: 
+filter rule: 
+filter rule: 
+Opening device any for sniffing ... 1
+Opening device any for sniffing ... 1
+filter rule: 
+filter rule: 
+filter rule: 
+filter rule: 
+filter rule: 
+Opening device any for sniffing ... 1
+Opening device any for sniffing ... 1
+main end
+main end
+main end
+Opening device lo for sniffing ... 1
+Opening device lo for sniffing ... 1
+main end
+Opening device eth0 for sniffing ... Opening device any for sniffing ... Opening device any for sniffing ... Opening device lo for sniffing ... Opening device any for sniffing ... Opening device eth0 for sniffing ... Opening device any for sniffing ... Opening device lo for sniffing ... Opening device lo for sniffing ... Opening device lo for sniffing ... Opening device lo for sniffing ... Opening device lo for sniffing ... Opening device lo for sniffing ... Opening device lo for sniffing ... Opening device any for sniffing ... Opening device lo for sniffing ... Opening device any for sniffing ... Opening device any for sniffing ... Opening device any for sniffing ... Opening device any for sniffing ... Opening device lo for sniffing ... Opening device lo for sniffing ... Opening device lo for sniffing ... Opening device lo for sniffing ... Opening device any for sniffing ... Opening device eth0 for sniffing ... Opening device lo for sniffing ... Opening device eth0 for sniffing ... Opening device eth0 for sniffing ... Opening device any for sniffing ... Opening device lo for sniffing ... Opening device lo for sniffing ... Opening device lo for sniffing ... Opening device lo for sniffing ... Opening device lo for sniffing ... Opening device lo for sniffing ... Opening device lo for sniffing ... Opening device eth0 for sniffing ... Opening device lo for sniffing ... Opening device lo for sniffing ... Opening device lo for sniffing ... Opening device lo for sniffing ... Opening device lo for sniffing ... Opening device eth0 for sniffing ... Opening device eth0 for sniffing ... Opening device lo for sniffing ... Opening device any for sniffing ... Opening device any for sniffing ... Opening device lo for sniffing ... Opening device lo for sniffing ... Opening device any for sniffing ... Opening device eth0 for sniffing ... iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+Opening device any for sniffing ... 1
+Opening device any for sniffing ... 1
+Opening device lo for sniffing ... 1
+Opening device lo for sniffing ... 1
+Opening device any for sniffing ... Opening device eth0 for sniffing ... Opening device lo for sniffing ... 1
+Opening device lo for sniffing ... 1
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+filter rule: 
+filter rule: 
+main end
+main end
+main end
+main end
+Opening device any for sniffing ... 1
+Opening device any for sniffing ... 1
+Opening device any for sniffing ... 1
+Opening device any for sniffing ... 1
+Opening device any for sniffing ... 1
+Opening device any for sniffing ... 1
+Opening device any for sniffing ... Opening device any for sniffing ... 1
+Opening device any for sniffing ... 1
+Opening device any for sniffing ... 1
+Opening device any for sniffing ... 1
+Opening device lo for sniffing ... Opening device any for sniffing ... 1
+Opening device eth0 for sniffing ... Opening device any for sniffing ... 1
+Opening device any for sniffing ... 1
+Opening device any for sniffing ... 1
+Opening device any for sniffing ... 1
+Opening device any for sniffing ... 1
+Opening device eth0 for sniffing ... Opening device any for sniffing ... Opening device lo for sniffing ... iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+main end
+main end
+main end
+main end
+Opening device lo for sniffing ... main end
+main end
+Opening device any for sniffing ... 1
+Opening device any for sniffing ... Opening device lo for sniffing ... Opening device lo for sniffing ... Opening device eth0 for sniffing ... Opening device any for sniffing ... 1
+Opening device lo for sniffing ... Opening device lo for sniffing ... Opening device lo for sniffing ... Opening device lo for sniffing ... iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+iter :alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")
+main end
+main end
+Opening device any for sniffing ... Opening device lo for sniffing ... Opening device any for sniffing ... Opening device eth0 for sniffing ... Opening device lo for sniffing ... Opening device any for sniffing ... Opening device eth0 for sniffing ... Opening device eth0 for sniffing ... Opening device lo for sniffing ... Opening device lo for sniffing ... Opening device any for sniffing ... Opening device lo for sniffing ... Opening device lo for sniffing ... Opening device lo for sniffing ... Opening device lo for sniffing ... Opening device lo for sniffing ... Opening device lo for sniffing ... Opening device lo for sniffing ... Opening device lo for sniffing ... Opening device any for sniffing ... Opening device any for sniffing ... Opening device lo for sniffing ... Opening device lo for sniffing ... Opening device lo for sniffing ... Opening device any for sniffing ... Opening device lo for sniffing ... Opening device lo for sniffing ... Opening device lo for sniffing ... Opening device lo for sniffing ... Opening device lo for sniffing ... Opening device lo for sniffing ... Opening device lo for sniffing ... Opening device lo for sniffing ... Opening device any for sniffing ... Opening device lo for sniffing ... Opening device eth0 for sniffing ... Opening device any for sniffing ... Opening device lo for sniffing ... Opening device eth0 for sniffing ... Opening device lo for sniffing ... Opening device eth0 for sniffing ... Opening device any for sniffing ... Opening device lo for sniffing ... Opening device any for sniffing ... Opening device any for sniffing ... Opening device lo for sniffing ... Opening device any for sniffing ... Opening device eth0 for sniffing ... Opening device lo for sniffing ... Opening device lo for sniffing ... Opening device any for sniffing ... Opening device eth0 for sniffing ... Opening device eth0 for sniffing ... Opening device eth0 for sniffing ... Opening device eth0 for sniffing ... Opening device eth0 for sniffing ... Opening device eth0 for sniffing ... Opening device eth0 for sniffing ... 

@@ -1,0 +1,27 @@
+alert tcp 192.168.1.0/24 any -> 192.168.1.0/24 22 (content:"/bin/sh"; msg:"Remote shell execution message! ")
+Finding available devices ... Done
+Available Devices are :
+1. eth0 - (null)
+2. any - Pseudo-device that captures on all interfaces
+3. lo - (null)
+iter :alert tcp 192.168.1.0/24 any -> 192.168.1.0/24 22 (content:"/bin/sh"; msg:"Remote shell execution message! ")
+snort rule size: 1
+filter rule: tcp and src net 192.168.1.0/24 and dst net 192.168.1.0/24 and dst port 22
+main end
+main end
+main end
+main end
+Opening device any for sniffing ... 1
+Opening device any for sniffing ... 1
+1
+1
+Opening device eth0 for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+1
+Opening device lo for sniffing ... 1
+Opening device lo for sniffing ... 1
+Opening device lo for sniffing ... 1
+1
+1
+1
