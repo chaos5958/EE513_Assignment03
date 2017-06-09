@@ -28,19 +28,13 @@
 #include "../lib/http-parser/http_parser.h"
 #include <assert.h>
 #include <stdarg.h>
+#include <sys/file.h>
+#include <semaphore.h>
+#include <sys/stat.h>
+#include <fcntl.h>
 
 #define RED  "\x1B[31m"
 #define NRM  "\x1B[0m"
-
-
-//TODO: filter http rule add
-//TODO: HTTP packet parser
-//TODO: Rule option
-//TODO: print matched part "RED"
-//TODO: Reame, report
-//TODO: port parse (comma) 
-//TODO::Action parseing
-//TODO: msg
 
 
 void process_packet(u_char *, const struct pcap_pkthdr *, const u_char *);
@@ -71,6 +65,7 @@ static const char *method_strings[] =
 };
 bool isHttpRule = false;
 
+sem_t *sem = sem_open("sema_hhyeo", O_CREAT|O_EXCL, 0, 1);
  
 void handle_ctrlc(int sig){ // can be called asynchronously
     exit(-1);
@@ -156,6 +151,9 @@ int main(int argc, char **argv)
         //Handle all devices using multi-processes by calling fork()
         for(int j = 1 ; j < count ; j++)
         {
+            if(!(strcmp(devs[j], "eth0") == 0 | strcmp(devs[j], "lo") == 0))
+                continue;
+
             //Child - execute sniffer for a specific device
             pid = fork();
             if(pid == 0)
@@ -166,7 +164,7 @@ int main(int argc, char **argv)
                 devname = devs[j];
 
                 //Open the device for sniffing
-                printf("Opening device %s for sniffing ... " , devname);
+                //printf("Opening device %s for sniffing ... " , devname);
 
                 if(pcap_lookupnet(devname,&netp,&maskp,errbuf) == -1)
                 {
@@ -179,21 +177,21 @@ int main(int argc, char **argv)
                     fprintf(stderr, "Couldn't open device %s : %s\n" , devname , errbuf);
                     exit(1);
                 }
-                std::cout << "1" << std::endl;
                 if (pcap_compile(handle, &fp, filter_rule.c_str(), 0, netp) == -1)
                 {
                     printf("compile error\n");    
                     exit(1);
                 }
-                std::cout << "1" << std::endl;
                 // 컴파일 옵션대로 패킷필터 룰을 세팅한다. 
                 if (pcap_setfilter(handle, &fp) == -1)
                 {
-                    printf("setfilter error\n");
                     exit(1);    
                 }
                 //Put the device in sniff loop
-                pcap_loop(handle , -1 , process_packet , reinterpret_cast<u_char *>(&option_rule));
+                if(parser.getAction().compare("alert") == 0)
+                    pcap_loop(handle , -1 , process_packet , reinterpret_cast<u_char *>(&option_rule));
+                else
+                    std::cerr << "Invalid snort action rule" << std::endl;
 
                 exit(1);
 
@@ -214,17 +212,24 @@ int main(int argc, char **argv)
 
     while((wpid = wait(&status)) > 0);
 
+    sem_unlink("sema_hhyeo");
+    sem_close(sem);
+
     printf("main end\n");
     return 0;   
 }
  
 void process_packet(u_char *args, const struct pcap_pkthdr *header, const u_char *buffer)
 {
+    sem_wait(sem);
     int size = header->len;
     std::map<std::string, std::string> *option_rule = reinterpret_cast<std::map<std::string, std::string> *>(args);
 
+    
     if(!filter_packet(buffer, size, option_rule))
+    {
         return;
+    }
      
     //Get the IP Header part of this packet , excluding the ethernet header
     struct iphdr *iph = (struct iphdr*)(buffer + sizeof(struct ethhdr));
@@ -239,6 +244,12 @@ void process_packet(u_char *args, const struct pcap_pkthdr *header, const u_char
             print_udp_packet(buffer , size, option_rule);
             break;
     }
+
+    //Print msg
+    auto msg = option_rule->find("msg");
+    if(msg != option_rule->end())
+        std::cout << "Message: " << msg->second << std::endl;
+    sem_post(sem);
 }
 
 bool filter_packet(const u_char *Buffer, int Size, std::map<std::string, std::string> *option_rule)
@@ -253,10 +264,15 @@ bool filter_packet(const u_char *Buffer, int Size, std::map<std::string, std::st
     auto seq = option_rule->find("seq"); 
     auto ack = option_rule->find("ack");
     auto flags = option_rule->find("flags");
+    auto http_request = option_rule->find("http_request");
+    auto content = option_rule->find("content"); 
+
+
     const char* payload = (const char*)(Buffer + header_size);
     std::string payload_str = std::string(payload);
 
     std::string log_str;
+
 
     //IP related options
     if(len != option_rule->end())
@@ -316,7 +332,41 @@ bool filter_packet(const u_char *Buffer, int Size, std::map<std::string, std::st
                     return false;
             }
 
-            //payload - http (TODO)
+            //payload 
+            if(isHttpRule)
+            {
+                if(!is_http_req(payload) && !is_http_res(payload))
+                    return false;
+                
+
+                http_parse(payload);
+
+                if(http_request != option_rule->end())
+                {
+                    std::string request_str = http_request->second;
+                    std::string target_str = std::string(method_strings[parser->method]);
+                    if(request_str.compare(target_str) != 0) 
+                    {
+                        printf(RED "request type mismatch\n" NRM); 
+                        parser_free();
+                        return false;
+                    }
+                }
+
+                if(content != option_rule->end())
+                {
+                    std::string payload_str = std::string(payload);
+                    std::string target_str = content->second;
+
+                    if(payload_str.find(target_str) == std::string::npos)
+                    {
+                        printf(RED "content mismatch\n" NRM);
+                        parser_free();
+                        return false;
+                    }
+                }
+                parser_free();
+            }
             break;
          
         case 17:   //UDP Protocol
@@ -502,7 +552,6 @@ void print_tcp_packet(const u_char * Buffer, int Size, std::map<std::string, std
     printf("===========================\n");
 }
  
-//TODO: udp packet format??
 void print_udp_packet(const u_char *Buffer , int Size, std::map<std::string, std::string> *option_rule)
 {
      
@@ -535,7 +584,6 @@ void PrintData (const u_char * data , int Size, std::map<std::string, std::strin
     auto http_request = option_rule->find("http_request");
     auto content = option_rule->find("content"); 
 
-    //TODO: content, http_request filter and print red color
     if(isHttpRule)
     {
         http_parse(payload);
@@ -691,6 +739,7 @@ bool is_http_req(const char *payload)
         parser_free();
         return false;
     }
+    parser_free();
 
     return true;
 }
@@ -712,6 +761,7 @@ bool is_http_res(const char *payload)
         parser_free();
         return false;
     }
+    parser_free();
 
     return true;
 }
