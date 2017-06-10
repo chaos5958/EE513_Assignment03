@@ -5,7 +5,6 @@
  *   'alert http any any -> any 80 (http_request:"GET"; content:"naver"; msg:"NAVER detected!")'
  *           */
 
-//TODO: write README file
 /* g++ version should be higher than 4.9 */
 
 #include <iostream>
@@ -256,7 +255,6 @@ std::string snort_parser::getHeaderRule()
     }
 
     //std::cout << "final rule: " << headerRule << std::endl;
-    //TODO
     return headerRule;
 }
 

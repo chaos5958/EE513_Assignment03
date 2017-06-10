@@ -64,9 +64,7 @@ static const char *method_strings[] =
 #undef XX
 };
 bool isHttpRule = false;
-
-sem_t *sem = sem_open("sema_hhyeo", O_CREAT|O_EXCL, 0, 1);
- 
+int fd; 
 void handle_ctrlc(int sig){ // can be called asynchronously
     exit(-1);
 }
@@ -87,11 +85,33 @@ int main(int argc, char **argv)
 
     pcap_if_t *alldevsp , *device;
     pcap_t *handle; //Handle of the device that shall be sniffed
+
  
     char errbuf[100] , *devname , devs[100][100];
     int count = 1, n;
      
     signal(SIGINT, handle_ctrlc);
+
+    int fd = open(".lockfile", 
+            O_CREAT | 
+            //create the file if it's not present.
+            O_WRONLY | //only need write access for the internal locking semantics.
+            S_IRUSR | S_IWUSR); //permissions on the file, 600 here.
+
+    if(fd == -1) 
+    {
+        fd = open(".lockfile", 
+            O_TRUNC |
+            //create the file if it's not present.
+            O_WRONLY | //only need write access for the internal locking semantics.
+            S_IRUSR | S_IWUSR); //permissions on the file, 600 here.
+    }
+
+    if(fd == -1)
+    {
+        perror("file lock fail");
+        exit(1);
+    }
 
     //Read snort rules
     std::vector<std::string> snortrules;
@@ -212,16 +232,18 @@ int main(int argc, char **argv)
 
     while((wpid = wait(&status)) > 0);
 
-    sem_unlink("sema_hhyeo");
-    sem_close(sem);
-
     printf("main end\n");
     return 0;   
 }
  
 void process_packet(u_char *args, const struct pcap_pkthdr *header, const u_char *buffer)
 {
-    sem_wait(sem);
+    int result = lockf(fd, F_LOCK, 0);
+
+    if(result == -1)
+        perror(RED "flock_lock");
+
+    //sem_wait(sem);
     int size = header->len;
     std::map<std::string, std::string> *option_rule = reinterpret_cast<std::map<std::string, std::string> *>(args);
 
@@ -249,7 +271,12 @@ void process_packet(u_char *args, const struct pcap_pkthdr *header, const u_char
     auto msg = option_rule->find("msg");
     if(msg != option_rule->end())
         std::cout << "Message: " << msg->second << std::endl;
-    sem_post(sem);
+    //sem_post(sem);
+    
+    result = lockf(fd, F_ULOCK, 0);
+
+    if(result == -1)
+        perror(RED "flock_unlock");
 }
 
 bool filter_packet(const u_char *Buffer, int Size, std::map<std::string, std::string> *option_rule)
@@ -366,6 +393,20 @@ bool filter_packet(const u_char *Buffer, int Size, std::map<std::string, std::st
                     }
                 }
                 parser_free();
+            }
+            else
+            {
+                if(content != option_rule->end())
+                {
+                    std::string payload_str = std::string(payload);
+                    std::string target_str = content->second;
+
+                    if(payload_str.find(target_str) == std::string::npos)
+                    {
+                        printf(RED "content mismatch\n" NRM);
+                        return false;
+                    }
+                }
             }
             break;
          
@@ -645,19 +686,39 @@ void PrintData (const u_char * data , int Size, std::map<std::string, std::strin
     }
     else
     {
-        std::cout << "Payload : ";
-        for(int i = 0; i < Size; i++)
+
+        if(content != option_rule->end())
         {
-            if(data[i]>=32 && data[i]<=128) 
+            std::string payload_str = std::string((const char*) data);
+            std::string target_str = content->second; 
+            size_t target_loc = payload_str.find(target_str);
+
+            printf(RED "Payload: " NRM);
+            for(int i = 0; i < Size; i++)
             {
-                printf( "%c",(unsigned char)data[i]);
+                if(i < target_loc || i > target_loc + target_str.length())
+                    printf("%c" , data[i]);
+                else
+                    printf(RED "%c" NRM, data[i]);
             }
-            else
-            {
-                printf( " "); //CR, LF -> " " 
-            }
+            printf("\n");
         }
-        printf("\n");
+        else
+        {
+            printf("Payload: ");
+            for(int i = 0; i < Size; i++)
+            {
+                if(data[i]>=32 && data[i]<=128) 
+                {
+                    printf( "%c",(unsigned char)data[i]);
+                }
+                else
+                {
+                    printf( " "); //CR, LF -> " " 
+                }
+            }
+            printf("\n");
+        }
     } 
 
     /*

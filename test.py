@@ -46,14 +46,14 @@ def sendHTTPPkts(rule):
 
 rule = 'alert tcp 192.168.1.0/24 any -> 192.168.1.0/24 22 (content:"/bin/sh"; msg:"Remote shell execution message!")'
 packet = Ether() / IP(src=str("192.168.1.5"), dst=str("192.168.1.6")) / TCP(sport=10000, dport=22) / "/bin/sh"
-#sendWithOutput(packet, rule)
+sendWithOutput(packet, rule)
 
 rule = 'alert tcp any any -> 143.248.5.153 80 (msg:"A packet destined to www.kaist.ac.kr")'
 packet = Ether() / IP(dst=str("143.248.5.153")) / TCP(dport=80)
-#sendWithOutput(packet, rule)
+sendWithOutput(packet, rule)
 
 rule = 'alert udp any any -> 192.168.1.0/24 1:1024 (msg:"udp traffic from any port and destination ports ranging from 1 to 1024")'
-#sendWithVariablePort(rule, 1, 1024)
+sendWithVariablePort(rule, 1, 1024)
 
 rule = 'alert http any any -> any 80 (http_request:"GET"; content:"google"; msg:"GOOGLE detected!")'
 sendHTTPPkts(rule)

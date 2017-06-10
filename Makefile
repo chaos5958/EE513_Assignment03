@@ -10,5 +10,4 @@ http:
 
 
 clean:
-	rm ../bin/my_nids ../bin/nids_hhyeo.o ../bin/snort_parser.o
-
+	rm ../bin/my_nids ../bin/nids_hhyeo.o ../bin/snort_parser.o ../bin/http_parser.o
